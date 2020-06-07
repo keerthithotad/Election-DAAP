@@ -36,8 +36,8 @@ Install dependencies :
     candidate = "candidate 1";
     } 
     }
-  Step 4:- 
-			Create 2_deploy_contracts.js under migrations folder
+  Step 4:- Create 2_deploy_contracts.js under migrations folder
+  
      var Election = artifacts.require("./Election.sol");
      module.exports = function(deployer) {
      deployer.deploy(Election);
@@ -45,24 +45,26 @@ Install dependencies :
     
    Migrate the contract using Truffle
    within the Terminal at election folder run the below code.
-     $truffle migrate
-
-     truffle console
-    truffle(development)> Election.deployed().then(function(instance) {app = instance })
-    undefined
-    truffle(development)> app.address
-    'xxxxxxxxxxxxxxxxxxxxx.......' (your address)
+       
+       $truffle migrate
+       $truffle console
+       $truffle(development)> Election.deployed().then(function(instance) {app = instance })
+       undefined
+       truffle(development)> app.address
+       'xxxxxxxxxxxxxxxxxxxxx.......' (your address)
 2) List Candidates
-   Step 5:-Change the contract code (Download the code).
-   Open Election.sol in sublime text and edit the code.
-   open Ganache and check the change in Balance.
-     truffle migrate --reset
-    console
-    Election.deployed().then(function(i){app =i; })
-    app.candidates(1)
-    app.candidates(2)
-    app.candidates(1).then(function(c) {candidate =c; })
-    candidate
+
+   Step 5:-  Change the contract code (Download the code).
+      Open Election.sol in sublime text and edit the code.
+     open Ganache and check the change in Balance.
+        
+       truffle migrate --reset
+        console
+        Election.deployed().then(function(i){app =i; })
+       app.candidates(1)
+       app.candidates(2)
+       app.candidates(1).then(function(c) {candidate =c; })
+       candidate
   fetch candidate
   step 6:- web3
     This will help us pull the voter details . Web.eth.getAccounts should give you the list of accounts / addressses connected to the blockchain. In our case, this is the list of accounts within the Ganache (local blockchain)
@@ -71,12 +73,12 @@ Step 7:Testing -
 	we create the election.js file under test folder.
 	(download the code.)
 	test the code using.
-       truffle test
+	   truffle test
 3) FRONT END CODE - HTML & JAVASCRIPT:-
-Step 8 :- we design front end page using html & javascripts 
-   1.index.html is the front end file.
-   2.app.js is the javascript file.
-   where we completely replace the previous pet-shop code by our designed interactive web page.
+Step 8 :-     we design front end page using html & javascripts 
+                   1.index.html is the front end file.
+                   2.app.js is the javascript file.
+       where we completely replace the previous pet-shop code by our designed interactive web page.
 Step 9 :- Terminal -Migrate the contract.
           connect to custom RPC-http://localhost:7545/ — you can see your port number from the Ganache block chain
           
